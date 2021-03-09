@@ -4,7 +4,7 @@ Vehículo autónomo  gobernado por un ordenador con el  objetivo de seguir linea
 Javier Robinat, 
 Álvaro Rico , 
 Carlos Miguel Martín, 
-Juan Bellido, 
+Joan Bellido, 
 Pablo Manuel Sánchez
 
 ## Objetivos del trabajo
