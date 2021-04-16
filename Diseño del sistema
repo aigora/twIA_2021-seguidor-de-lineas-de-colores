@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+  // Funciones prototipo
+
+int menu_app(void);
+void configuracion(void);
+
+int main(void)
+{
+    int opc;
+    // Tareas de configuración y carga
+    configuracion();
+   
+    // Bucle principal de la aplicación
+    do 
+    {
+        opc = menu_app();
+        switch (opc)
+        {
+        case 1:break; // se indicara al sensor que camino seguir y los motores del vehículo actuarán en consecuencia
+        case 2:break; // se indicara al sensor que camino seguir y los motores del vehículo actuarán en consecuencia
+        case 3:break; // se indicara al sensor que camino seguir y los motores del vehículo actuarán en consecuencia
+        case 4:break; // se saldrá de la aplicación
+        default: break;
+        }
+    } while (opc != 4);
+    
+    
+    // Tareas de deconexión y cierre
+}
+int menu_app(void)
+{
+    int opcion;
+    do
+    {
+        printf("\nIntroduzca el camino que desee seguir: ");
+        printf("\n1 - Camino banda negra\n");
+        printf("\n2 - Camino banda roja\n");
+        printf("\n3 - Camino banda amarilla\n");
+        printf("\n4 - Cerrar Aplicación\n");
+        scanf_s("%d", &opcion);
+        if (opcion < 1 || opcion>4)
+            printf("\nOpción inexistente.\n\n");
+    } while (opcion < 1 || opcion>4);
+    return opcion;
+}
+void configuracion(void)
+{
+    // Establece juego de caracteres castellano
+    // Para que funcione hay que partir de un proyecto vacío
+    // No utilice la plantilla Aplicación de consola C++
+    setlocale(LC_ALL, "spanish");
+}
