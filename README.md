@@ -17,5 +17,5 @@ Identificamos el chasis y los compenentes electrónicos
 El chasis está formado por contrachapado, cuenta con multitud de agujeros de diferentes tamaños con el objetivo de poder acoplar todos los elementos necesarios.
 En primer lugar decidimos montar dos ruedas que van conectadas a través de dos motores que se conectan a su vez a una batería formada por 4 pilas y a un interruptor.
 Seguidamente colocamos una tercera rueda que actúa como auxiliar y cuyo giro es de 360º.
-https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/master/coche%201.jpeg
+![image](https://user-images.githubusercontent.com/61272141/117010129-c73f3600-acec-11eb-8004-abe25de5663f.png)
 
