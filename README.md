@@ -9,3 +9,10 @@ Pablo Manuel Sánchez
 
 ## Objetivos del trabajo
 Ampliar nuestros conocimientos sobre los sensores que vamos a utilizar además de practicar y mejorar nuestra habilidad a la hora de crear y manejar código en el lenguaje de C
+
+## Hardware
+Identificamos el chasis y los compenentes electrónicos
+
+### Chasis
+
+
