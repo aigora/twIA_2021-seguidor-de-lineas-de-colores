@@ -17,7 +17,9 @@ Identificamos el chasis y los compenentes electrónicos
 El chasis está formado por contrachapado, cuenta con multitud de agujeros de diferentes tamaños con el objetivo de poder acoplar todos los elementos necesarios.
 En primer lugar decidimos montar dos ruedas que van conectadas a través de dos motores que se conectan a su vez a una batería formada por 4 pilas y a un interruptor.
 Seguidamente colocamos una tercera rueda que actúa como auxiliar y cuyo giro es de 360º.
+
 ![image](https://user-images.githubusercontent.com/61272141/117010129-c73f3600-acec-11eb-8004-abe25de5663f.png)
+
 ![image](https://user-images.githubusercontent.com/61272141/117010314-f81f6b00-acec-11eb-8434-5c17844dfd44.png)
 
 ### Componentes electrónicos
@@ -47,6 +49,7 @@ Caracteristicas:
 * Memoria Flash de 32k
 
 * 16Mhz Clock Speed
+
 ![image](https://user-images.githubusercontent.com/61272141/117012393-2f8f1700-acef-11eb-97a6-3ca5477210dc.png)
 
 #### L298N
@@ -54,7 +57,16 @@ Es un driver dual basado en el chip L298N. Permite controlar dos motores de corr
 
 * Con el jumper activado. Se podrán conectar voltajes de entre 6v y 12v al pin +12v. Como el jumper se encuentra activo, en el pin +5v obtendremos 5v de salida, que utilizaremos para alimentar el Arduino.
 * Con el jumper desactivado. Se podrán conectar voltajes al pin +12v de entre 12v y 35v. Pero, a diferencia del método anterior, tendremos que alimentar la parte lógica del      módulo conectándole 5v externos adicionales a través del pin +5v.
+
 ![image](https://user-images.githubusercontent.com/61272141/117013065-cf4ca500-acef-11eb-9b72-57aa7cf134b2.png)
+
+#### TCS34725
+El TCS34725 es un sensor de color digital que podemos emplear con un procesador como Arduino para obtener los medir los valores RGB del color de un objeto o luz.
+El TCS34725 es un integrado completo que realiza un tratamiento digital de la medición de color, proporcionando los valores RGB y Clear. La comunicación con el sensor se realiza por I2C por lo que su lectura desde un procesador como Arduino es muy sencilla. Incorpora un filtro de infrarrojos, lo que mejora su precisión ante el ruido del entorno. El tiempo de medición y la ganancia es ajustable por software. Dispone de una amplia sensibilidad y un amplio rango dinámico de 3.800.000:1, pudiendo funcionar incluso tras un cristal oscuro.
+Puede incorporar un LED de luz neutra (4150°K) junto con un MOSFET integrado para su control, por lo que podemos controlar el encendido del LED desde el código.
+Además de la comunicación I2C, el TCS34725 incorpora un pin de interrupción junto con un umbral inferior y superior. Cuando el nivel de luz está fuera del rango de los umbrales, el TCS34725 genera una interrupción que permanece activa hasta que es reseteada por el controlador.
+
+![image](https://user-images.githubusercontent.com/61272141/117014693-551d2000-acf1-11eb-892f-b355cc7d90c6.png)
 
 
 
