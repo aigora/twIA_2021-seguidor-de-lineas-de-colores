@@ -54,7 +54,8 @@ Es un driver dual basado en el chip L298N. Permite controlar dos motores de corr
 
 * Con el jumper activado. Se podrán conectar voltajes de entre 6v y 12v al pin +12v. Como el jumper se encuentra activo, en el pin +5v obtendremos 5v de salida, que utilizaremos para alimentar el Arduino.
 * Con el jumper desactivado. Se podrán conectar voltajes al pin +12v de entre 12v y 35v. Pero, a diferencia del método anterior, tendremos que alimentar la parte lógica del      módulo conectándole 5v externos adicionales a través del pin +5v.
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/61272141/117013065-cf4ca500-acef-11eb-9b72-57aa7cf134b2.png)
+
 
 
 
