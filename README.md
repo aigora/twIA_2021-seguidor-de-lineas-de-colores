@@ -18,4 +18,5 @@ El chasis está formado por contrachapado, cuenta con multitud de agujeros de di
 En primer lugar decidimos montar dos ruedas que van conectadas a través de dos motores que se conectan a su vez a una batería formada por 4 pilas y a un interruptor.
 Seguidamente colocamos una tercera rueda que actúa como auxiliar y cuyo giro es de 360º.
 ![image](https://user-images.githubusercontent.com/61272141/117010129-c73f3600-acec-11eb-8004-abe25de5663f.png)
+![image](https://user-images.githubusercontent.com/61272141/117010314-f81f6b00-acec-11eb-8434-5c17844dfd44.png)
 
