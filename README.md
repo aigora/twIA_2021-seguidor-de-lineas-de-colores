@@ -24,6 +24,9 @@ Seguidamente colocamos una tercera rueda que actúa como auxiliar y cuyo giro es
 
 ![image](https://user-images.githubusercontent.com/61272141/117015751-4f740a00-acf2-11eb-9765-f451bb520dad.png)
 
+![image](https://user-images.githubusercontent.com/61272141/117036064-55271b00-ad05-11eb-822f-f314233f3f16.png)
+
+
 
 ### Componentes electrónicos
 El vehículo esta compuesto por diversos componentes electrónicos que se detallarán a continuación. Cabe remarcar que algunos de ellos pueden verse variados debido al problema actual de abastecimiento.
