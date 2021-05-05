@@ -1,0 +1,43 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+	int a, b;
+	do {
+		cout << "1- Verde";
+		cout << "2- Rojo";
+		cout << "3- Azul";
+		cout << "4- Salida";
+		cin >> a;
+
+		switch (a)
+		{
+		case 1:
+			cout << "El coche seguira la linea de color verde \n";
+			break;
+		case 2:
+			cout << "El coche seguira la linea de color rojo \n";
+			break;
+		case 3:
+			cout << "El coche seguira la linea de color azul \n";
+			break;
+		case 4:
+			cout << "¿Seguro que quieres salir?  SI o NO \n";
+			cout << "\n 1-SI";
+			cout << "\n 2-NO";
+			cin >> b;
+			if (b = 1)
+			{
+				return 0;
+			}
+			else
+			{
+				return main();
+			}
+			break;
+		}
+	} while (a != 4);
+}
