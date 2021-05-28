@@ -83,11 +83,13 @@ https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/ec955a9c2
 Con este sencillo programa, lo que se ha conseguido es verificar el correcto funcionamiento tanto del motor como del driver, así como confirmar que los pines escogidos son válidos. En un primer lugar declaramos los pines utilizados, para más adelante declararlos como salida, ya que solo recibiran información. En el void loop del programa se determina el sentido de giro mediante los pines IN1 y IN2. Sin embargo lo que conseguimos mediante el ENA es variar la velocidad de giro del motor. 
 
 Programación de prueba del TCS34725.
+https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/2be4f229ad31fd3647c34dcb0a15312eaac23c27/C%C3%B3digo%20sensor%20Adafruit
 
 
 
 Con este programa, al igual que con el anterior y el que viene a continuación, verificamos el correcto funcionamiento del componente.  Como se puede observar, primeramente declaramos la librería que vamos a utilizar, lo que nos permite simplificar en gran medida nuestro programa. SE declaran los pines y la funcion setup y loop.
 
 Programación para que el programa en Visual del ordenador de coordine con el de arduino. Este va unido a los otros dos códigos.
+https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/f74104ecd539d0a3254735e6117c73ec6cb3b40b/Arduino_final.ino
 
 
