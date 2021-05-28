@@ -78,7 +78,39 @@ Además de la comunicación I2C, el TCS34725 incorpora un pin de interrupción j
 El software se va a desarrollar a través del ELEGOO UNO R3 de Arduino. Como punto de inicio se han desarrollado programas individuales para los distintos componentes con el fin de obtener los parámetros necesarios para la futura programación definitiva.
 
 Comenzamos con el driver controlador del motor L298N.
+int ENA = 5; 
+int IN1 = 2;
+int IN2 = 3;
 
+int IN3 = 7;
+int IN4 = 8;
+int ENB = 9;
+
+
+void setup ()
+{
+ // Declaramos todos los pines como salidas
+pinMode (ENA, OUTPUT);
+pinMode (IN1, OUTPUT);
+pinMode (IN2, OUTPUT);
+
+pinMode (ENB, OUTPUT);
+pinMode (IN3, OUTPUT);
+pinMode (IN4, OUTPUT);
+
+}
+
+void loop ()
+{
+ //Direccion motor 1 y 2
+digitalWrite (IN1, HIGH);
+digitalWrite (IN2, LOW);
+analogWrite (ENA, 100); //Velocidad motor 1
+
+digitalWrite (IN3, HIGH);
+digitalWrite (IN4, LOW);
+analogWrite (ENB, 100); //Velocidad motor 2
+}
 
 Con este sencillo programa, lo que se ha conseguido es verificar el correcto funcionamiento tanto del motor como del driver, así como confirmar que los pines escogidos son válidos. En un primer lugar declaramos los pines utilizados, para más adelante declararlos como salida, ya que solo recibiran información. En el void loop del programa se determina el sentido de giro mediante los pines IN1 y IN2. Sin embargo lo que conseguimos mediante el ENA es variar la velocidad de giro del motor. 
 
