@@ -74,6 +74,85 @@ Además de la comunicación I2C, el TCS34725 incorpora un pin de interrupción j
 
 ![image](https://user-images.githubusercontent.com/61272141/117014693-551d2000-acf1-11eb-892f-b355cc7d90c6.png)
 
+## Software
+El software se va a desarrollar a través del ELEGOO UNO R3 de Arduino. Como punto de inicio se han desarrollado programas individuales para los distintos componentes con el fin de obtener los parámetros necesarios para la futura programación definitiva.
 
+Comenzamos con el driver controlador del motor L298N.
+// Motores 
+// Declaramos los pines a los que esta conectado el l298N
+int ENA = 5; 
+int IN1 = 2;
+int IN2 = 3;
+
+int IN3 = 7;
+int IN4 = 8;
+int ENB = 9;
+
+
+void setup ()
+{
+  //Declaramos todos los pines como salidas
+pinMode (ENA, OUTPUT);
+pinMode (IN1, OUTPUT);
+pinMode (IN2, OUTPUT);
+
+pinMode (ENB, OUTPUT);
+pinMode (IN3, OUTPUT);
+pinMode (IN4, OUTPUT);
+
+}
+
+void loop ()
+{
+ //Direccion motor 1 y 2
+digitalWrite (IN1,LOW);
+digitalWrite (IN2, HIGH);
+analogWrite (ENA, 200); //Velocidad motor 1
+
+digitalWrite (IN3, LOW);
+digitalWrite (IN4, HIGH);
+analogWrite (ENB, 200); //Velocidad motor 2
+
+}
+
+Con este sencillo programa, lo que se ha conseguido es verificar el correcto funcionamiento tanto del motor como del driver, así como confirmar que los pines escogidos son válidos. En un primer lugar declaramos los pines utilizados, para más adelante declararlos como salida, ya que solo recibiran información. En el void loop del programa se determina el sentido de giro mediante los pines IN1 y IN2. Sin embargo lo que conseguimos mediante el ENA es variar la velocidad de giro del motor. 
+
+Programación de prueba del TCS34725.
+
+#include <Wire.h>
+#include "Adafruit_TCS34725.h"
+   
+/* Initialise with default values (int time = 2.4ms, gain = 1x) */
+// Adafruit_TCS34725 tcs = Adafruit_TCS34725();
+Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
+void setup(void) {
+  Serial.begin(9600);
+  
+  if (!tcs.begin()) 
+  {
+    Serial.println("Error al iniciar TCS34725");
+    while (1) delay(1000);
+  }
+}
+void loop(void) {
+  uint16_t r, g, b, c, colorTemp, lux;
+  
+  tcs.getRawData(&r, &g, &b, &c);
+  colorTemp = tcs.calculateColorTemperature(r, g, b);
+  lux = tcs.calculateLux(r, g, b);
+  
+  Serial.print("Temperatura color: "); Serial.print(colorTemp, DEC); Serial.println(" K");
+  Serial.print("Lux : "); Serial.println(lux, DEC);
+  Serial.print("Rojo: "); Serial.println(r, DEC);
+  Serial.print("Verde: "); Serial.println(g, DEC);
+  Serial.print("Azul: "); Serial.println(b, DEC);
+  Serial.print("Clear: "); Serial.println(c, DEC);
+  Serial.println(" ");
+  delay(1000);
+}
+
+Con este programa, al igual que con el anterior y el que viene a continuación, verificamos el correcto funcionamiento del componente.  Como se puede observar, primeramente declaramos la librería que vamos a utilizar, lo que nos permite simplificar en gran medida nuestro programa. SE declaran los pines y la funcion setup y loop.
+
+Programación para que el programa en Visual del ordenador de coordine con el de arduino. Este va unido a los otros dos códigos.
 
 
