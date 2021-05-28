@@ -92,4 +92,10 @@ Con este programa, al igual que con el anterior y el que viene a continuación, 
 Programación para que el programa en Visual del ordenador de coordine con el de arduino. Este va unido a los otros dos códigos.
 https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/f74104ecd539d0a3254735e6117c73ec6cb3b40b/Arduino_final.ino
 
+#### Código en C
+Por su parte el código en Visual desd el cual el usuario interactua con el seguidor de líneas a través del arduino es el siguiente:
+https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/a63d5577d31fb7bfcc589efc5bca99fcc9bc501f/Principal.cpp
+https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/a63d5577d31fb7bfcc589efc5bca99fcc9bc501f/SerialClass.cpp
+https://github.com/aigora/twIA_2021-seguidor-de-lineas-de-colores/blob/a63d5577d31fb7bfcc589efc5bca99fcc9bc501f/SerialClass.h
+
 
